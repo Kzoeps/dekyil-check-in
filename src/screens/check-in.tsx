@@ -1,6 +1,10 @@
+import {Typography} from "@mui/material";
+
 export const CheckIn = (props: Record<string, unknown>) => {
 	return <>
-		<h1>Check In</h1>
+		<Typography variant='h1'>
+			Check in
+		</Typography>
 	</>
 }
 
