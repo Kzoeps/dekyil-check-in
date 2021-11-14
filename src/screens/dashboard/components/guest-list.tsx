@@ -7,7 +7,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {ColumnConfig} from '../models/models';
-import humanId from 'human-id';
 
 export default function GuestList(props: {rows: Record<string, any>[],columns: Readonly<ColumnConfig[]>}) {
 	const {rows, columns} = props;
@@ -21,6 +20,7 @@ export default function GuestList(props: {rows: Record<string, any>[],columns: R
 				</TableHead>
 				<TableBody>
 					{rows.map((row,index) => (
+						// change this to row.checkInId once data sanitized.
 						<TableRow
 							key={index}
 							sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
