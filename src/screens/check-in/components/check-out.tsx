@@ -18,10 +18,10 @@ export const CheckOut = () => {
 		const checkIn = await CHECK_IN_N_OUT_CALLS.getCheckIn(values.checkInId);
 		if (checkIn.exists()) {
 			const checkOutInfo = handlePayloadCreation(values);
-			console.log(checkOutInfo);
+			await CHECK_IN_N_OUT_CALLS.checkOut(checkOutInfo, values.checkInId);
 			setSnackToShow(<Alert severity="success">Check Out Successful!</Alert>);
-			return;
-			// await CHECK_IN_N_OUT_CALLS.checkOut(checkOutInfo);
+		} else {
+			setSnackToShow(<Alert severity="error">Check In Id does not exists!</Alert>);
 		}
 		setShowSnack(true);
 	};
