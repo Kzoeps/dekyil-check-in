@@ -27,7 +27,7 @@ export const GUEST_LIST_COLUMNS: Readonly<ColumnConfig[]> = [
 	},
 	{
 		field: 'checkOutTime',
-		display: 'Check Out Date'
+		display: 'Check Out Time'
 	}
 ]
 
