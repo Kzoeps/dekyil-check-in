@@ -11,3 +11,17 @@ export interface CheckInFormValues extends BaseCheckInValues{
 	checkInDate: Date;
 	checkInTime: Date;
 }
+
+export interface BaseCheckoutValues {
+	checkInId: string;
+}
+
+export interface CheckOutFormValues extends BaseCheckoutValues {
+	checkOutDate: Date;
+	checkOutTime: Date;
+}
+
+export interface CheckOutValues extends BaseCheckoutValues {
+    checkOutDate: string;
+    checkOutTime: string;
+}

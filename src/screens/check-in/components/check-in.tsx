@@ -6,6 +6,7 @@ import {CHECK_IN_N_OUT_CALLS} from '../api/API';
 import {generateId} from '../../../utils/functions/misc';
 import BasicModal from '../../../utils/components/common-modal/common-modal';
 import {useRef} from 'react';
+import {DayJsFormats} from '../../../utils/constants/enums';
 
 export const CheckIn = () => {
 	const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -13,8 +14,8 @@ export const CheckIn = () => {
 	const handlePayloadCreation = (values: CheckInFormValues) => {
 		return {
 			...values,
-			checkInDate: dayjs().format('YYYY-MM-DD'),
-			checkInTime: dayjs().format('HH:mm')
+			checkInDate: dayjs().format(DayJsFormats.date),
+			checkInTime: dayjs().format(DayJsFormats.time)
 		};
 	};
 
