@@ -25,3 +25,9 @@ export interface CheckOutValues extends BaseCheckoutValues {
     checkOutDate: string;
     checkOutTime: string;
 }
+
+export interface GuestCheckInInfo extends CheckInFormValues {
+	checkOutDate?: string;
+	checkOutTime?: string;
+	uniqueId?: string;
+}
