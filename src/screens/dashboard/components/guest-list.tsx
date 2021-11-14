@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {ColumnConfig} from '../models/models';
 
 function createData(
 	name: string,
@@ -25,17 +26,19 @@ const rows = [
 	createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export default function GuestList() {
+export default function GuestList(props: {column: Readonly<ColumnConfig[]>}) {
+	const {column} = props;
 	return (
 		<TableContainer component={Paper}>
 			<Table sx={{ minWidth: 650 }} aria-label="simple table">
 				<TableHead>
 					<TableRow>
-						<TableCell>Dessert (100g serving)</TableCell>
-						<TableCell align="right">Calories</TableCell>
-						<TableCell align="right">Fat&nbsp;(g)</TableCell>
-						<TableCell align="right">Carbs&nbsp;(g)</TableCell>
-						<TableCell align="right">Protein&nbsp;(g)</TableCell>
+						{column.map((config) => (<TableCell key={config.field}>{config.display}</TableCell>))}
+						{/*<TableCell>Dessert (100g serving)</TableCell>*/}
+						{/*<TableCell align="right">Calories</TableCell>*/}
+						{/*<TableCell align="right">Fat&nbsp;(g)</TableCell>*/}
+						{/*<TableCell align="right">Carbs&nbsp;(g)</TableCell>*/}
+						{/*<TableCell align="right">Protein&nbsp;(g)</TableCell>*/}
 					</TableRow>
 				</TableHead>
 				<TableBody>

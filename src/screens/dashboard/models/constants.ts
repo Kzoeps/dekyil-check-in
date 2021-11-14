@@ -1,7 +1,9 @@
-export const GUEST_LIST_COLUMNS = [
+import {ColumnConfig} from './models';
+
+export const GUEST_LIST_COLUMNS: Readonly<ColumnConfig[]> = [
 	{
 		field: 'checkInId',
-		display: 'Check In Id'
+		display: 'Check In ID'
 	},
 	{
 		field: 'name',
@@ -28,4 +30,5 @@ export const GUEST_LIST_COLUMNS = [
 		display: 'Check Out Date'
 	}
 ]
+
 export {};
