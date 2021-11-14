@@ -7888,6 +7888,11 @@ https-proxy-agent@5, https-proxy-agent@^5.0.0:
     agent-base "6"
     debug "4"
 
+human-id@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/human-id/-/human-id-3.0.0.tgz#018957533b9f19bedcc48fe77980874884f4b301"
+  integrity sha512-smROKWOQI3rjjR44o5m9Bk2ds5YVTxfeL/rmp28fwOQyNhfQH13KMZ/jUErceC2fBuiQeOrWenopUN8hsBGZtQ==
+
 human-signals@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
