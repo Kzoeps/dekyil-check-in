@@ -14,14 +14,13 @@ export const LoginContainer = () => {
 		try {
 			await AUTH_API_CALLS.login(email, password);
 			snackMessage.current = <Alert severity="success">Sign In Successful</Alert>;
-			navigate('dashboard')
+			navigate('/dashboard')
 		} catch (e: any) {
 			snackMessage.current = <Alert severity="error">{e.message}</Alert>;
 		} finally {
 			setShowSnack(true);
 		}
 	};
-
 	useEffect(() => {
 		return () => {
 			setShowSnack(false);
