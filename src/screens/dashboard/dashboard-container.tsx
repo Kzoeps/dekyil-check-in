@@ -8,7 +8,7 @@ export const Dashboard = () => {
 	return (
 		<div>
 			<Typography variant="h3">Dashboard</Typography>
-			<GuestList rows={} columns={}/>
+			<GuestList/>
 		</div>
 	);
 };
