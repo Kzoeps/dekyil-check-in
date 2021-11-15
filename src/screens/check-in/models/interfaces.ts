@@ -1,6 +1,15 @@
 export interface BaseCheckInValues {
 	name: string;
 	cid: string;
+	roomNo: string;
+	noOfPersons: string;
+	nationality: string,
+	contactNo: string,
+	permanentAddress: string,
+	purposeOfVisit: string,
+	comingFrom: string,
+	nextDestination: string,
+	vehicleNo: string,
 }
 export interface CheckInValues extends BaseCheckInValues{
 	checkInDate: string;
