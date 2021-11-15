@@ -2,7 +2,7 @@ import * as React from 'react';
 import {LocalizationProvider} from '@mui/lab';
 import DateAdapter from '@mui/lab/AdapterDayjs';
 import {Field, Form, Formik} from 'formik';
-import {CHECK_IN_INITIAL_VALUES} from '../models/constants';
+import {CHECK_IN_FORM_VALIDATION_SCHEMA, CHECK_IN_INITIAL_VALUES} from '../models/constants';
 import {TextField} from 'formik-mui';
 import {Button, InputAdornment} from '@mui/material';
 import {
@@ -25,6 +25,7 @@ export const CheckInForm = ({handleSubmit}: { handleSubmit: GenericFunction }) =
 				<Formik
 					initialValues={CHECK_IN_INITIAL_VALUES}
 					onSubmit={handleSubmit}
+					validationSchema={CHECK_IN_FORM_VALIDATION_SCHEMA}
 				>
 					{({submitForm}) => (
 						<Form>
