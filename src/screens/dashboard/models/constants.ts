@@ -14,6 +14,42 @@ export const GUEST_LIST_COLUMNS: Readonly<ColumnConfig[]> = [
 		display: 'CID'
 	},
 	{
+		field: 'roomNo',
+		display: 'Room Number'
+	},
+	{
+		field: 'noOfPersons',
+		display: 'Number of People'
+	},
+	{
+		field: 'nationality',
+		display: 'Nationality'
+	},
+	{
+		field: 'contactNo',
+		display: 'Contact Number'
+	},
+	{
+		field: 'permanentAddress',
+		display: 'Permanent Address'
+	},
+	{
+		field: 'purposeOfVisit',
+		display: 'Purpose of Visit'
+	},
+	{
+		field: 'comingFrom',
+		display: 'Coming From'
+	},
+	{
+		field: 'nextDestination',
+		display: 'Next Destination'
+	},
+	{
+		field: 'vehicleNo',
+		display: 'Vehicle Number'
+	},
+	{
 		field: 'checkInDate',
 		display: 'Check In Date'
 	},
@@ -30,5 +66,3 @@ export const GUEST_LIST_COLUMNS: Readonly<ColumnConfig[]> = [
 		display: 'Check Out Time'
 	}
 ]
-
-export {};
