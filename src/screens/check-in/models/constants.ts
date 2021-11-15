@@ -26,7 +26,7 @@ export const CHECK_IN_FORM_VALIDATION_SCHEMA = Yup.object().shape({
 	roomNo: Yup.string().required('Room No is required'),
 	noOfPersons: Yup.string().required('No of Persons is required'),
 	nationality: Yup.string().required('Nationality is required'),
-	contactNo: Yup.string().required('Contact Number is required'),
+	contactNo: Yup.string().required('Contact Number is required').matches(/^([17][7])[1-9]{6}$/, 'Not a valid number'),
 	permanentAddress: Yup.string().required('Permanent address is required'),
 	purposeOfVisit: Yup.string().required('Purpose of visit is required'),
 	comingFrom: Yup.string().required('Location source is required'),
