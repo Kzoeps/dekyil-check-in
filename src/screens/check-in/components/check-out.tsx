@@ -4,7 +4,7 @@ import {CheckOutFormValues} from '../models/interfaces';
 import dayjs from 'dayjs';
 import {DayJsFormats} from '../../../utils/constants/enums';
 import {CHECK_IN_N_OUT_CALLS} from '../api/API';
-import {Alert, Snackbar} from '@mui/material';
+import {Alert, Box, Snackbar} from '@mui/material';
 
 export const CheckOut = () => {
 	const [showSnack, setShowSnack] = React.useState(false);
@@ -26,10 +26,12 @@ export const CheckOut = () => {
 		setShowSnack(true);
 	};
 	return <>
-		<CheckOutForm handleSubmit={onCheckOut}/>
-		<Snackbar open={showSnack} autoHideDuration={6000} onClose={() => setShowSnack(false)}>
-			{snackToShow}
-		</Snackbar>
+		<Box sx={{mx: 'auto', width: 250}}>
+			<CheckOutForm handleSubmit={onCheckOut}/>
+			<Snackbar open={showSnack} autoHideDuration={6000} onClose={() => setShowSnack(false)}>
+				{snackToShow}
+			</Snackbar>
+		</Box>
 	</>;
 };
 export default CheckOut;

@@ -6,14 +6,19 @@ import {CHECK_IN_FORM_VALIDATION_SCHEMA, CHECK_IN_INITIAL_VALUES} from '../model
 import {TextField} from 'formik-mui';
 import {Button, InputAdornment} from '@mui/material';
 import {
+	AccessTime,
 	AccountCircle,
-	ContactMail, DriveEta,
+	ContactMail,
+	DriveEta,
+	Event,
 	FingerprintOutlined,
 	FlightLand,
 	FlightTakeoff,
 	Home,
-	Language, PeopleAlt,
-	Phone, VpnKey
+	Language,
+	PeopleAlt,
+	Phone,
+	VpnKey
 } from '@mui/icons-material';
 import {MobileDatePicker, TimePicker} from 'formik-mui-lab';
 import {GenericFunction} from '../../../utils/types/models';
@@ -200,19 +205,43 @@ export const CheckInForm = ({handleSubmit}: { handleSubmit: GenericFunction }) =
 								   name="checkInDate"
 								   label="Check In Date"
 								   type="date"
-								   inputFormat="DD-MM-YYYY"/>
+								   inputFormat="DD-MM-YYYY"
+								   InputProps={{
+									   startAdornment: (
+										   <InputAdornment position="start">
+											   <Event/>
+										   </InputAdornment>
+									   )
+								   }}
+							/>
 							<br/>
 							<br/>
 							<Field component={TimePicker}
 								   label="Check In Time"
-								   name="checkInTime"/>
+								   name="checkInTime"
+								   InputProps={{
+									   startAdornment: (
+										   <InputAdornment position="start">
+											   <AccessTime/>
+										   </InputAdornment>
+									   )
+								   }}
+							/>
 							<br/>
 							<br/>
 							<Field component={MobileDatePicker}
 								   name="checkOutDate"
 								   label="Check Out Date"
 								   type="date"
-								   inputFormat="DD-MM-YYYY"/>
+								   inputFormat="DD-MM-YYYY"
+								   InputProps={{
+									   startAdornment: (
+										   <InputAdornment position="start">
+											   <Event/>
+										   </InputAdornment>
+									   )
+								   }}
+							/>
 							<br/>
 							<br/>
 							<Button variant="contained" color="primary" onClick={submitForm}>

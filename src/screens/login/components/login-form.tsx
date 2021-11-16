@@ -3,7 +3,7 @@ import {GenericFunction} from '../../../utils/types/models';
 import * as React from 'react';
 import {Button, InputAdornment} from '@mui/material';
 import {TextField} from 'formik-mui';
-import {AccountCircle} from '@mui/icons-material';
+import {Email, Lock} from '@mui/icons-material';
 
 export const LoginForm = ({handleSubmit}: { handleSubmit: GenericFunction }) => {
 	return (
@@ -24,7 +24,7 @@ export const LoginForm = ({handleSubmit}: { handleSubmit: GenericFunction }) => 
 								InputProps={{
 									startAdornment: (
 										<InputAdornment position="start">
-											<AccountCircle/>
+											<Email/>
 										</InputAdornment>
 									)
 								}}
@@ -40,7 +40,7 @@ export const LoginForm = ({handleSubmit}: { handleSubmit: GenericFunction }) => 
 							   InputProps={{
 								   startAdornment: (
 									   <InputAdornment position="start">
-										   <AccountCircle/>
+										   <Lock/>
 									   </InputAdornment>
 								   )
 							   }}

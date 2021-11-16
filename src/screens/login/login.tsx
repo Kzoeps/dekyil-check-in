@@ -3,7 +3,7 @@ import {useEffect, useRef} from 'react';
 import LoginForm from './components/login-form';
 import {LoginFormValues} from './models/models';
 import {AUTH_API_CALLS} from './api/API';
-import {Alert, Snackbar} from '@mui/material';
+import {Alert, Box, Snackbar} from '@mui/material';
 import {useNavigate} from 'react-router-dom';
 
 export const LoginContainer = () => {
@@ -27,10 +27,12 @@ export const LoginContainer = () => {
 		};
 	}, []);
 	return <>
-		<LoginForm handleSubmit={login}/>
-		<Snackbar open={showSnack} autoHideDuration={6000} onClose={() => setShowSnack(false)}>
-			{snackMessage.current}
-		</Snackbar>
+		<Box sx={{width: 250, mx: "auto"}}>
+			<LoginForm handleSubmit={login}/>
+			<Snackbar open={showSnack} autoHideDuration={6000} onClose={() => setShowSnack(false)}>
+				{snackMessage.current}
+			</Snackbar>
+		</Box>
 	</>;
 };
 
