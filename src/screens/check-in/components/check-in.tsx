@@ -7,6 +7,7 @@ import {generateId} from '../../../utils/functions/misc';
 import BasicModal from '../../../utils/components/common-modal/common-modal';
 import {useRef} from 'react';
 import {DayJsFormats} from '../../../utils/constants/enums';
+import { Box } from '@mui/material';
 
 export const CheckIn = () => {
 	const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -28,12 +29,12 @@ export const CheckIn = () => {
 		setIsModalOpen(true)
 	};
 	return (
-		<div>
+		<Box sx={{ mx: "auto", width: 250}}>
 			<CheckInForm handleSubmit={onFormSubmit}/>
 			<BasicModal open={isModalOpen} header={`Check in ID: ${checkInId.current}`}
 						description="Please save this ID. You will need this during checkout" buttonText="OK"
 						onButtonClick={() => setIsModalOpen(false)}/>
-		</div>
+		</Box>
 	);
 };
 
