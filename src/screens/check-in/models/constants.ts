@@ -12,6 +12,7 @@ export const CHECK_IN_INITIAL_VALUES = {
 	vehicleNo: '',
 	checkInDate: '',
 	checkInTime: '',
+	checkOutDate: '',
 	name: '',
 	cid: ''
 };

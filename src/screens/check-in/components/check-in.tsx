@@ -15,7 +15,8 @@ export const CheckIn = () => {
 		return {
 			...values,
 			checkInDate: dayjs().format(DayJsFormats.date),
-			checkInTime: dayjs().format(DayJsFormats.time)
+			checkInTime: dayjs().format(DayJsFormats.time),
+			checkOutDate: dayjs().format(DayJsFormats.date)
 		};
 	};
 
